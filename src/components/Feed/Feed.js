@@ -5,6 +5,7 @@ import './Feed.scss';
 import FeedNavBar from '../FeedNavBar';
 import LatestFeedWraper from '../LatestFeedWraper';
 import PopularFeedWraper from '../PopularFeedWraper';
+import Spinner from '../Spinner';
 
 export const Feed = () => {
   const [filter, setFilter] = useState('latest');
@@ -25,7 +26,7 @@ export const Feed = () => {
     <div className="feed">
       <FeedNavBar filter={filter} setFilter={setFilter} />
       {isLoading ? (
-        <div>Loading...</div>
+        <Spinner />
       ) : filter === 'latest' ? (
         <LatestFeedWraper posts={posts} />
       ) : filter === 'popular' ? (

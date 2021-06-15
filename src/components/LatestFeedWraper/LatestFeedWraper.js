@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import './LatestFeedWraper.scss';
+import PostCard from '../PostCard';
 
 export const LatestFeedWraper = ({ posts }) => {
   return (
@@ -9,9 +10,11 @@ export const LatestFeedWraper = ({ posts }) => {
       {posts.map((post) => {
         if (!post.isPopular) {
           return (
-            <div key={post.id} className="latest-feed-wraper-item">
-              {post.id}
-            </div>
+            <PostCard
+              key={post.id}
+              className="latest-feed-wraper-item"
+              post={post}
+            />
           );
         }
         return null;
