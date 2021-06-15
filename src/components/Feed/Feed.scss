@@ -1,0 +1,10 @@
+@import '../../styles/utils/colors.scss';
+
+.feed {
+  width: 100%;
+  background-color: $feed-background;
+  grid-area: feed;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

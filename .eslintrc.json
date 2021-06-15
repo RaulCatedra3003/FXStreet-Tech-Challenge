@@ -21,6 +21,7 @@
     "react/jsx-props-no-spreading": "off",
     "arrow-body-style": "off",
     "no-underscore-dangle": "off",
+    "no-nested-ternary": "off",
     "react/forbid-prop-types": "off",
     "jsx-a11y/no-onchange": "off",
     "jsx-a11y/label-has-associated-control": [

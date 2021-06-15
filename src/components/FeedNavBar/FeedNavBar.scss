@@ -1,0 +1,50 @@
+@import '../../styles/utils/colors.scss';
+
+.feed-nav-bar {
+  width: 100%;
+  height: 65px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  &__buttons {
+    width: 165px;
+    height: 21px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 34px;
+    margin-left: 15px;
+
+    &-item {
+      width: 75px;
+      height: 21px;
+      background-color: transparent;
+      border: none;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 17.6px;
+      line-height: 21px;
+      color: $feed-nav-bar-unselected;
+      cursor: pointer;
+    }
+  }
+
+  &__filter {
+    width: 21px;
+    height: 21px;
+    margin-top: 35px;
+    margin-right: 17px;
+
+    &-item {
+      width: 100%;
+      height: 100%;
+      color: $feed-nav-bar-unselected;
+      cursor: pointer;
+    }
+  }
+}
+
+.active {
+  color: $feed-nav-bar-selected;
+}
