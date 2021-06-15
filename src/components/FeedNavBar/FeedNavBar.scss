@@ -17,6 +17,7 @@
     margin-left: 15px;
 
     &-item {
+      text-align: left;
       width: 75px;
       height: 21px;
       background-color: transparent;
@@ -27,6 +28,7 @@
       line-height: 21px;
       color: $feed-nav-bar-unselected;
       cursor: pointer;
+      padding: 0;
     }
   }
 

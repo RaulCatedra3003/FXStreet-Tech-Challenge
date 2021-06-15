@@ -1,5 +1,21 @@
+@import './utils/colors.scss';
+
 body {
   margin: 0;
+  font-family: 'Roboto';
+}
+
+a {
+  text-decoration: none;
+  color: $feed-nav-bar-selected;
+}
+
+p {
+  display: block;
+  margin-block-start: 0px;
+  margin-block-end: 0px;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
 }
 
 .App {
