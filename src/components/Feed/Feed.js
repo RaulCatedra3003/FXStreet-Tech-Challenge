@@ -17,6 +17,12 @@ export const Feed = () => {
     fetch('https://run.mocky.io/v3/25c6bdb6-6377-41f9-907d-c6549ce9e4f7')
       .then((res) => res.json())
       .then((result) => {
+        result.sort((a, b) => {
+          return (
+            new Date(b.publicationTime).getTime() -
+            new Date(a.publicationTime).getTime()
+          );
+        });
         setPosts(result);
         setIsLoading(false);
       });

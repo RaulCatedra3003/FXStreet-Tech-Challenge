@@ -1,16 +1,34 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { FiClock, FiHeart, FiBookmark, FiMoreHorizontal } from 'react-icons/fi';
 import { HiOutlineDocumentSearch } from 'react-icons/hi';
+import { FaHeart, FaBookmark } from 'react-icons/fa';
+import parse from 'react-html-parser';
 
 import './PostCard.scss';
 
 export const PostCard = ({ post, ...props }) => {
+  const [liked, setLiked] = useState(false);
+  const [saved, setSaved] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
   const date = new Date(post.publicationTime);
   const stringDate = date.toDateString().split(' ');
   const finalDateString = `${stringDate[1]} ${
     stringDate[2]
   }, ${date.getUTCHours()}:${date.getUTCMinutes()}`;
+
+  const handleLike = () => {
+    setLiked(!liked);
+  };
+
+  const handleSave = () => {
+    setSaved(!saved);
+  };
+
+  const handleOpenModal = () => {
+    setIsModalOpen(true);
+  };
 
   return (
     <div {...props}>
@@ -50,27 +68,59 @@ export const PostCard = ({ post, ...props }) => {
       </div>
       <div className="post-separator" />
       <div className="post-body">
-        <div
-          className="post-body__content"
-          dangerouslySetInnerHTML={{ __html: post.content }}
-        />
+        <div className="post-body__content">{parse(post.content)}</div>
         {post.imageUrl && (
           <img src={post.imageUrl} alt="post" className="post-body__img" />
         )}
       </div>
       <div className="post-options">
-        <button type="button" className="post-options__like">
-          <FiHeart className="post-options__like-icon" />
-          Like
-        </button>
-        <button type="button" className="post-options__save">
-          <FiBookmark className="post-options__save-icon" />
-          Save
-        </button>
-        <button type="button" className="post-options__menu">
+        {liked ? (
+          <button
+            type="button"
+            className="post-options__like liked"
+            onClick={handleLike}
+          >
+            <FaHeart className="post-options__like-icon" />
+            Liked!
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="post-options__like"
+            onClick={handleLike}
+          >
+            <FiHeart className="post-options__like-icon" />
+            Like
+          </button>
+        )}
+        {saved ? (
+          <button
+            type="button"
+            className="post-options__save saved"
+            onClick={handleSave}
+          >
+            <FaBookmark className="post-options__save-icon" />
+            Saved!
+          </button>
+        ) : (
+          <button
+            type="button"
+            className="post-options__save"
+            onClick={handleSave}
+          >
+            <FiBookmark className="post-options__save-icon" />
+            Save
+          </button>
+        )}
+        <button
+          type="button"
+          className="post-options__menu"
+          onClick={handleOpenModal}
+        >
           <FiMoreHorizontal className="post-options__menu-icon" />
         </button>
       </div>
+      {isModalOpen && <div className="post-modal">Modal</div>}
     </div>
   );
 };
