@@ -8,6 +8,7 @@
   position: fixed;
   display: flex;
   justify-content: space-between;
+  z-index: 999999;
 
   &__img {
     width: 137px;

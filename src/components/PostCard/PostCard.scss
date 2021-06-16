@@ -224,3 +224,24 @@
 .saved {
   color: $saved;
 }
+
+.ddOptions,
+.ddForm {
+  position: absolute;
+  right: 59px;
+  background-color: $post-card-background;
+  border: 1px solid $post-card-border;
+  box-sizing: border-box;
+  box-shadow: 0px 4px 14px rgba(0, 0, 0, 0.08);
+  z-index: 99;
+}
+
+.ddOptions {
+  width: 190px;
+  bottom: -97px;
+}
+
+.ddForm {
+  width: 290px;
+  bottom: -403px;
+}

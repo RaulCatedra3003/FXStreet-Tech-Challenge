@@ -7,10 +7,14 @@ import parse from 'react-html-parser';
 
 import './PostCard.scss';
 
+import DropDownOptions from '../DropDownOptions/DropDownOptions';
+import DropDownForm from '../DropDownForm/DropDownForm';
+
 export const PostCard = ({ post, ...props }) => {
   const [liked, setLiked] = useState(false);
   const [saved, setSaved] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isModalInFormStage, setIsModalInFormStage] = useState(false);
 
   const date = new Date(post.publicationTime);
   const stringDate = date.toDateString().split(' ');
@@ -28,6 +32,19 @@ export const PostCard = ({ post, ...props }) => {
 
   const handleOpenModal = () => {
     setIsModalOpen(true);
+  };
+
+  const handleHideClick = () => {
+    setIsModalInFormStage(true);
+  };
+
+  const closeFormModal = () => {
+    setIsModalInFormStage(false);
+  };
+
+  const closeModals = () => {
+    setIsModalInFormStage(false);
+    setIsModalOpen(false);
   };
 
   return (
@@ -120,7 +137,21 @@ export const PostCard = ({ post, ...props }) => {
           <FiMoreHorizontal className="post-options__menu-icon" />
         </button>
       </div>
-      {isModalOpen && <div className="post-modal">Modal</div>}
+      {isModalOpen ? (
+        isModalInFormStage ? (
+          <DropDownForm
+            handleClose={closeFormModal}
+            closeModals={closeModals}
+            className="ddForm"
+          />
+        ) : (
+          <DropDownOptions
+            handleHideClick={handleHideClick}
+            closeModals={closeModals}
+            className="ddOptions"
+          />
+        )
+      ) : null}
     </div>
   );
 };

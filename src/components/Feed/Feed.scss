@@ -2,6 +2,7 @@
 
 .feed {
   width: 100%;
+  min-height: 1280px;
   background-color: $feed-background;
   grid-area: feed;
   display: flex;
