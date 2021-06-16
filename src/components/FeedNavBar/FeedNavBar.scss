@@ -21,6 +21,10 @@
     margin-top: 34px;
     margin-left: 15px;
 
+    @media (min-width: 1000px) {
+      margin-left: 35px;
+    }
+
     &-item {
       text-align: left;
       width: 75px;
@@ -38,16 +42,50 @@
   }
 
   &__filter {
-    width: 21px;
-    height: 21px;
     margin-top: 35px;
     margin-right: 17px;
 
+    @media (min-width: 1000px) {
+      margin-right: 37px;
+    }
+
     &-item {
-      width: 100%;
-      height: 100%;
+      width: 21px;
+      height: 21px;
       color: $feed-nav-bar-unselected;
       cursor: pointer;
+
+      @media (min-width: 1000px) {
+        display: none;
+      }
+    }
+
+    &-text {
+      align-items: center;
+      margin-right: 10px;
+      display: none;
+
+      @media (min-width: 1000px) {
+        display: flex;
+      }
+
+      &-first {
+        margin-right: 11px;
+        color: $post-title;
+        font-size: 14.72px;
+      }
+
+      &-second {
+        display: flex;
+        align-items: center;
+        font-size: 17.6px;
+        font-weight: bold;
+
+        &-icon {
+          margin-left: 14px;
+          margin-top: 5px;
+        }
+      }
     }
   }
 }

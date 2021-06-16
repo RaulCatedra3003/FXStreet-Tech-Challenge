@@ -1,6 +1,6 @@
 import React from 'react';
-import { FiFilter } from 'react-icons/fi';
 import PropTypes from 'prop-types';
+import { FiFilter, FiChevronDown } from 'react-icons/fi';
 
 import './FeedNavBar.scss';
 
@@ -39,6 +39,10 @@ export const FeedNavBar = ({ filter, setFilter }) => {
       </div>
       <div className="feed-nav-bar__filter">
         <FiFilter className="feed-nav-bar__filter-item" />
+        <div className='feed-nav-bar__filter-text'>
+          <div className='feed-nav-bar__filter-text-first'>Show:</div>
+          <div className='feed-nav-bar__filter-text-second'>All <FiChevronDown className='feed-nav-bar__filter-text-second-icon'/></div>
+        </div>
       </div>
     </div>
   );
