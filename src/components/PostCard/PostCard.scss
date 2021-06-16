@@ -157,6 +157,8 @@
     margin-right: 39px;
     font-size: 16px;
     color: $post-title;
+    padding: 0;
+    width: 69px;
 
     &-icon {
       margin-right: 5px;
@@ -179,6 +181,8 @@
     margin-right: 53px;
     font-size: 16px;
     color: $post-title;
+    padding: 0;
+    width: 76px;
 
     &-icon {
       margin-right: 5px;
@@ -227,8 +231,12 @@
 
 .ddOptions,
 .ddForm {
-  position: absolute;
-  right: 59px;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  margin: auto auto;
   background-color: $post-card-background;
   border: 1px solid $post-card-border;
   box-sizing: border-box;
@@ -238,10 +246,10 @@
 
 .ddOptions {
   width: 190px;
-  bottom: -97px;
+  height: 98px;
 }
 
 .ddForm {
   width: 290px;
-  bottom: -403px;
+  height: 406px;
 }
