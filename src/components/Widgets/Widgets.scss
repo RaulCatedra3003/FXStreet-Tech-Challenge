@@ -1,10 +1,11 @@
-.header {
+.widgets {
   display: none;
-  background-color: aqua;
+  background-color: rgb(216, 253, 253);
 
   @media (min-width: 1000px) {
     display: block;
-    grid-area: header;
+    grid-area: widgets;
     position: relative;
+    height: 100%;
   }
 }

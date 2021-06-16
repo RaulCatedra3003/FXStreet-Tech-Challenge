@@ -2,10 +2,41 @@
 
 .feed {
   width: 100%;
-  min-height: 1280px;
+  height: 100%;
   background-color: $feed-background;
   grid-area: feed;
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  @media (min-width: 1000px) {
+    overflow-y: scroll;
+  }
+}
+
+.feed::-webkit-scrollbar {
+  -webkit-appearance: none;
+}
+
+.feed::-webkit-scrollbar:vertical {
+  width: 7px;
+}
+
+.feed::-webkit-scrollbar-button:increment,
+.contenedor::-webkit-scrollbar-button {
+  display: none;
+}
+
+.contenedor::-webkit-scrollbar:horizontal {
+  height: 10px;
+}
+
+.feed::-webkit-scrollbar-thumb {
+  background-color: #79797941;
+  border-radius: 20px;
+  border: 2px solid #f1f2f3;
+}
+
+.feed::-webkit-scrollbar-track {
+  border-radius: 10px;
 }

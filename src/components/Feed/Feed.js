@@ -1,14 +1,13 @@
 import React, { useEffect, useState } from 'react';
+import PropTypes from 'prop-types';
 
 import './Feed.scss';
 
-import FeedNavBar from '../FeedNavBar';
 import LatestFeedWraper from '../LatestFeedWraper';
 import PopularFeedWraper from '../PopularFeedWraper';
 import Spinner from '../Spinner';
 
-export const Feed = () => {
-  const [filter, setFilter] = useState('latest');
+export const Feed = ({ filter }) => {
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -30,7 +29,6 @@ export const Feed = () => {
 
   return (
     <div className="feed">
-      <FeedNavBar filter={filter} setFilter={setFilter} />
       {isLoading ? (
         <Spinner />
       ) : filter === 'latest' ? (
@@ -40,4 +38,8 @@ export const Feed = () => {
       ) : null}
     </div>
   );
+};
+
+Feed.propTypes = {
+  filter: PropTypes.string.isRequired,
 };
