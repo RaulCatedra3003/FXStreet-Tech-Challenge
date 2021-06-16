@@ -1,11 +1,74 @@
+@import '../../styles/utils/colors.scss';
+
 .widgets {
   display: none;
-  background-color: rgb(216, 253, 253);
+  background-color: $feed-background;
+  grid-area: widgets;
+  height: 100%;
+  position: relative;
 
   @media (min-width: 1000px) {
     display: block;
-    grid-area: widgets;
-    position: relative;
+  }
+
+  &-wraper {
+    width: 95%;
     height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+
+    &__first-item {
+      width: 100%;
+      height: 154px;
+      background-color: $brand-blue;
+      border-radius: 4px;
+      margin-top: 25px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+
+      &__rectangle-long {
+        width: 80%;
+        height: 10px;
+        background-color: $post-card-background;
+        margin-top: 35px;
+        margin-bottom: 16px;
+        margin-left: 21px;
+      }
+
+      &__rectangle-short {
+        width: 60%;
+        height: 10px;
+        background-color: $post-card-background;
+        margin-left: 21px;
+      }
+    }
+
+    &__second-item {
+      width: 98%;
+      height: 56px;
+      border: 2px solid $brand-blue;
+      border-radius: 4px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      &__rectangle {
+        width: 100px;
+        height: 10px;
+        background-color: $brand-blue;
+      }
+
+      &__circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: $brand-blue;
+        margin-left: 6px;
+      }
+    }
   }
 }

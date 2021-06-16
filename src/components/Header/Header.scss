@@ -1,10 +1,114 @@
+@import '../../styles/utils/colors.scss';
+
 .header {
+  width: 100%;
+  height: 65px;
   display: none;
-  background-color: aqua;
+  background-color: $post-card-background;
+  grid-area: header;
+  position: relative;
 
   @media (min-width: 1000px) {
-    display: block;
-    grid-area: header;
+    display: flex;
+  }
+
+  &-first {
+    width: 72%;
+    height: 100%;
+    display: flex;
     position: relative;
+
+    &__circle {
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      background-color: $brand-blue;
+      position: relative;
+      top: 24px;
+      left: 26px;
+    }
+
+    &__rectangle-blue {
+      width: 136px;
+      height: 10px;
+      background-color: $brand-blue;
+      position: relative;
+      top: 28px;
+      margin-left: 38px;
+    }
+
+    &__rectangle-orange {
+      width: 136px;
+      height: 10px;
+      background-color: $feed-nav-bar-selected;
+      position: absolute;
+      top: 28px;
+      right: 27px;
+    }
+  }
+
+  &-buttons {
+    width: 28%;
+    position: relative;
+    display: flex;
+    height: 100%;
+
+    &-first {
+      width: 68px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid $feed-background;
+      border-right: 1px solid $feed-background;
+
+      &-circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: $feed-nav-bar-unselected;
+      }
+    }
+
+    &-second {
+      width: 68px;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-left: 1px solid $feed-background;
+      border-right: 1px solid $feed-background;
+
+      &-circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: $feed-nav-bar-unselected;
+      }
+    }
+
+    &-third {
+      width: 186px;
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      &-circle {
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: $feed-nav-bar-unselected;
+        position: relative;
+        left: 22px;
+      }
+
+      &-rectangle {
+        width: 91px;
+        height: 10px;
+        background-color: $feed-nav-bar-unselected;
+        position: relative;
+        left: 35px;
+      }
+    }
   }
 }

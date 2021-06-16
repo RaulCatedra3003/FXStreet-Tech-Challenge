@@ -1,11 +1,33 @@
+@import '../../styles/utils/colors.scss';
+
 .sidebar {
   display: none;
   grid-area: sidebar;
-  background-color: aquamarine;
+  background-color: $side-bar-color;
 
   @media (min-width: 1000px) {
     display: block;
     position: relative;
-    height: 100vh;
+    height: 100%;
+  }
+
+  &__img {
+    position: relative;
+    top: 47px;
+    left: 46px;
+  }
+
+  &__items {
+    position: relative;
+    top: 202px;
+    left: 46px;
+    width: fit-content;
+
+    &-item {
+      width: 111px;
+      height: 10px;
+      background-color: $post-card-border;
+      margin-bottom: 20px;
+    }
   }
 }
