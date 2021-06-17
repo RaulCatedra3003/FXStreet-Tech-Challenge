@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import { FiClock, FiHeart, FiBookmark, FiMoreHorizontal } from 'react-icons/fi';
 import { HiOutlineDocumentSearch } from 'react-icons/hi';
 import { FaHeart, FaBookmark } from 'react-icons/fa';
+import { RiArrowDropRightFill } from 'react-icons/ri';
 import parse from 'react-html-parser';
 
 import './PostCard.scss';
@@ -56,6 +57,7 @@ export const PostCard = ({ post, ...props }) => {
               <HiOutlineDocumentSearch className="post-head__info-category-feed-icon" />
               {post.feed}
             </div>
+            <RiArrowDropRightFill className='post-head__info-category-icon' />
             <div className="post-head__info-category-subfeed">
               {post.subFeed}
             </div>
