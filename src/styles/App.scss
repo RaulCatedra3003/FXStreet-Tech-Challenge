@@ -62,4 +62,8 @@ ul {
   justify-content: center;
   align-items: center;
   z-index: 99;
+
+  @media (min-width: 1000px) {
+    background-color: rgba(0, 0, 0, 0);
+  }
 }

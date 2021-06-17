@@ -74,6 +74,10 @@
       align-items: center;
       margin-right: 12px;
 
+      @media (min-width: 1000px) {
+        margin-right: 28px;
+      }
+
       &-icon {
         margin-right: 5px;
         width: 15px;
@@ -208,7 +212,11 @@
     font-size: 16px;
     color: $post-title;
     padding: 0;
-    width: 69px;
+    width: 76px;
+
+    @media (min-width: 1000px) {
+      margin-left: 30px;
+    }
 
     &-icon {
       margin-right: 5px;
@@ -297,9 +305,27 @@
 .ddOptions {
   width: 190px;
   height: 98px;
+
+  @media (min-width: 1000px) {
+    position: absolute;
+    margin: 0;
+    bottom: -91px;
+    left: 257px;
+    right: unset;
+    top: unset;
+  }
 }
 
 .ddForm {
   width: 290px;
   height: 406px;
+
+  @media (min-width: 1000px) {
+    position: absolute;
+    margin: 0;
+    bottom: -400px;
+    left: 257px;
+    right: unset;
+    top: unset;
+  }
 }
