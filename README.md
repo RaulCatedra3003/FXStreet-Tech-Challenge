@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+This project proposes a web app to resolve a tech interview challenge, based en some Figma wireframes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Start 🚀
 
-## Available Scripts
+Get a clone of the project in local. You need to have installed nodejs in your computer to run the proyect.
 
-In the project directory, you can run:
+### Requirements 📋
 
-### `yarn start`
+_You need to install nodejs_
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Go to [NodeJs web page](https://nodejs.org/es/) download and install the
+program.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### Instalation 🔧
 
-### `yarn test`
+_First clone the repository_
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+git clone https://github.com/RaulCatedra3003/FXStreet-Tech-Challenge.git
+```
 
-### `yarn build`
+_Then run npm install in the base folder_
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```
+npm install
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+_Then you can run the server with the next command_
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+```
+npm run start
+```
 
-### `yarn eject`
+## Build with 🛠️
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [NodeJS](https://nodejs.org/es/)
+- [React](https://es.reactjs.org/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Contributing 🖇️
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+If you want to contribute, please fork the repository, create a new branch whit
+your contribution, and push the branch as a pull requests.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+## Contributors ✨
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Made with ❤ by [Raúl Cátedra Martínez](https://github.com/RaulCatedra3003)
